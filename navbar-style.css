@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+nav * {
+    color: #F0F8FF;
+}
+
+nav {
+    background-color: #007ec1;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+}
+
+.logo {
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin: auto 0 auto 20px
+}
+
+nav ul {
+    margin: auto;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: gold;
+}
