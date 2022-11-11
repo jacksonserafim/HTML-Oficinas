@@ -14,7 +14,6 @@
         <nav>
             <a href="base.html" class="logo">SISTEMA CEIT</a>
             <ul>
-                <li><a href="base.html">Página Inicial</a></li>
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
@@ -22,52 +21,55 @@
    </header>
     
     <main>
-        <h1>CADASTRAR OFICINA</h1>
-        <form action="">
-            <fieldset class="grupo">
+        <section id="cadastro-oficina">
+            <div class="formulario">
+                <h1>CADASTRAR OFICINA</h1>
+                <form action="">
+                    <fieldset class="grupo">
                 
-                <label for="nome-oficina">Nome da oficina:</label>
-                <input type="text" name="nome-oficina" id="nome-oficina" placeholder="Digite o nome" required> 
+                        <div class="campo">
+                            <label for="nome-oficina">Nome da oficina:</label>
+                            <input type="text" name="nome-oficina" id="nome-oficina" placeholder="Digite o nome da oficina..." required>
+                        </div>
                 
-                <label for="nome-professor">Professor:</label>
+                        
+                        <!-- NECESSARIO FAZER A PARTE DO DJANGO POSTERIORMENTE PARA PREENCHER COM BANCO DE DADOS
+                        OS NOMES DOS PROFESSORES -->
+                        
+                        <div class="campo">
+                            <label for="nome-professor">Professor:</label>
+                            <select name="nome-professor" id="nome-professor" required>
+                                <option selected disabled value="">Selecione</option>
+                                <option value="">Teste 123</option>
+                                <option value="">Teste 321</option>
+                                <option value="">Preencher com banco de dados</option>
+                            </select>
+                        </div>
+                        <div class="campo">
+                            <label for="vagas">Vagas:</label>
+                            <input type="number" name="vagas" id="vagas" min="1" placeholder="Digite o número de vagas disponíveis" required>
+                        </div>
+                    </fieldset>
                 
-                <!- NECESSARIO FAZER A PARTE DO DJANGO POSTERIORMENTE PARA PREENCHER COM BANCO DE DADOS
-                OS NOMES DOS PROFESSORES ->
-                
-                <select name="nome-professor" id="nome-professor" required>
-                    <option selected disabled value="">Selecione</option>
-                    <option value="">Teste 123</option>
-                    <option value="">Teste 321</option>
-                    <option value="">Preencher com banco de dados</option>
-                </select>
-
-                <label for="vagas">Vagas:</label>
-                    <input type="number" name="vagas" id="vagas" value="1" min="1" required>
-            </fieldset>
-            
-            <fieldset class="grupo">
-
-                <label>Selecione os dias de oficina:</label>
-                <input type="checkbox" name="segunda" id="segunda" value="segunda">
-                <label for="segunda">Segunda-feira</label>
-                <input type="checkbox" name="terca" id="terca" value="terca">
-                <label for="terca">Terça-feira</label>
-                <input type="checkbox" name="quarta" id="quarta" value="quarta">
-                <label for="quarta">Quarta-feira</label>
-                <input type="checkbox" name="quinta" id="quinta" value="quinta">
-                <label for="quinta">Quinta-feira</label>
-                <input type="checkbox" name="sexta" id="sexta" value="sexta">
-                <label for="sexta">Sexta-feira</label>
-            
-            </fieldset>
-
-            <div>
-                <label for="">Observações:</label>
-                <textarea name="observacoes" id="observacoes" cols="30" rows="10" >Nenhuma observação...</textarea>
+                    <fieldset class="grupo">
+                        <label>Selecione os dias de oficina:</label>
+                        <div id="check">
+                            <input type="checkbox" name="segunda" id="segunda" value="segunda">
+                            <label for="segunda">Segunda-feira</label>
+                            <input type="checkbox" name="terca" id="terca" value="terca">
+                            <label for="terca">Terça-feira</label>
+                            <input type="checkbox" name="quarta" id="quarta" value="quarta">
+                            <label for="quarta">Quarta-feira</label>
+                            <input type="checkbox" name="quinta" id="quinta" value="quinta">
+                            <label for="quinta">Quinta-feira</label>
+                            <input type="checkbox" name="sexta" id="sexta" value="sexta">
+                            <label for="sexta">Sexta-feira</label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="cadastro">CADASTRAR</button>
+                </form>
             </div>
-
-            <button type="submit">CADASTRAR</button>
-        </form>
+        </section>
     </main>
     
 </body>
