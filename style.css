@@ -116,3 +116,68 @@ button.cadastro:hover {
     clear: both;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container div {
+    margin: 10px;
+}
+
+.container div label {
+    cursor: pointer;
+}
+
+.container div label input[type="checkbox"] {
+    display: none;
+}
+
+.container div label span {
+    position: relative;
+    display: inline-block;
+    background: gray;
+    color: #3f3f3f;
+    padding: 10px 10px ;
+    border-radius: 10px;
+    transition: all 0.5;
+    user-select: none;
+    overflow: hidden;
+}
+
+.container div label input[type="checkbox"]:checked ~ span {
+    color: #F0F8FF;
+    background: #007ec1;
+}
+
+/* ----> Tela cadastro + <---- */
+
+main#cadastrar-plus {
+    height: 80vh;
+}
+
+main#cadastrar-plus section { 
+    height: 100%; 
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+button.cadastrar-plus {
+    margin: 10px;
+    border: 0;
+    background-color: #007ec1;
+    color: #F0F8FF;
+    border-radius: 5px;
+    height: 30px;
+    width: 80%;
+    cursor: pointer;
+}
+
+button.cadastrar-plus a {
+    color: #F0F8FF;
+    text-decoration: none;
+    font-size: 20px;
+}

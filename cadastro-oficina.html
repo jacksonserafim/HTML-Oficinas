@@ -14,7 +14,8 @@
         <nav>
             <a href="base.html" class="logo">SISTEMA CEIT</a>
             <ul>
-                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastrar.html">Cadastrar +</a></li>
+                <li><a href="login.html">Login</a></li>    
             </ul>
         </nav>
 
@@ -38,7 +39,7 @@
                         
                         <div class="campo">
                             <label for="nome-professor">Professor:</label>
-                            <select name="nome-professor" id="nome-professor" required>
+                            <select name="nome-professor" id="nome-professor">
                                 <option selected disabled value="">Selecione</option>
                                 <option value="">Teste 123</option>
                                 <option value="">Teste 321</option>
@@ -47,25 +48,20 @@
                         </div>
                         <div class="campo">
                             <label for="vagas">Vagas:</label>
-                            <input type="number" name="vagas" id="vagas" min="1" placeholder="Digite o número de vagas disponíveis" required>
+                            <input type="number" name="vagas" id="vagas" min="1" max="99" placeholder="Digite o número de vagas disponíveis" required>
                         </div>
                     </fieldset>
                 
-                    <fieldset class="grupo">
-                        <label>Selecione os dias de oficina:</label>
-                        <div id="check">
-                            <input type="checkbox" name="segunda" id="segunda" value="segunda">
-                            <label for="segunda">Segunda-feira</label>
-                            <input type="checkbox" name="terca" id="terca" value="terca">
-                            <label for="terca">Terça-feira</label>
-                            <input type="checkbox" name="quarta" id="quarta" value="quarta">
-                            <label for="quarta">Quarta-feira</label>
-                            <input type="checkbox" name="quinta" id="quinta" value="quinta">
-                            <label for="quinta">Quinta-feira</label>
-                            <input type="checkbox" name="sexta" id="sexta" value="sexta">
-                            <label for="sexta">Sexta-feira</label>
-                        </div>
-                    </fieldset>
+                    <label>Selecione os dias de oficina:</label><br><br>
+
+                    <div class="container">
+                        <div><label><input type="checkbox" value="segunda"><span class="list">Segunda-feira</span></input></label></div>
+                        <div><label><input type="checkbox" value="terca"><span class="list">Terça-feira</span></input></label></div>
+                        <div><label><input type="checkbox" value="quarta"><span class="list">Quarta-feira</span></input></label></div>
+                        <div><label><input type="checkbox" value="quinta"><span class="list">Quinta-feira</span></input></label></div>
+                        <div><label><input type="checkbox" value="sexta"><span class="list">Sexta-feira</span></input></label></div>
+                    </div>
+
                     <button type="submit" class="cadastro">CADASTRAR</button>
                 </form>
             </div>
